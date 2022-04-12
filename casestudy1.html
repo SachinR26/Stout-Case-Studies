@@ -47,7 +47,64 @@
 		  </nav>
     <!-- END nav -->
   </div>
+  <br><br>
+  		<div class="container">
+			<div class="row justify-content-center">
+				<br><br>
+					<h2 class="h4">Dataset Description</h2>
+					<p style="">This Dataset talks about whether individuals can lend loan toother individuals based on various factors. The entire dataset is a list of people whose loans are granted. This dataset help easily identify the risk factor and whether or not we have lend loan to people whom we do not know based on certain factors like income, reason for loa, joint or individual application, what the home ownership status etc. We are aiming to calculate the interest rate that can be given to a person if loan is granted based on the status of the person. </p>
+					<br>
+					<p>I feel that the data is biased as the list of loans consist mostly of people paying off their loan taken and also all the individuals are people who have their loans granted. Hence, an unbiased dataset will help us predict a much better model whether we can give loan and the risk factor involved. The dataset is not clean and has  lots of missing data. There are lots  of categorical unwanted variables that may ruin the calculation of interest rate when training a model.</p>
+					<br><br>
+					<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Visualizations</h2>
+					<h4 class="h4">Plot 1</h4>
+					<img src="images/CaseStudy1/vis1.png" width=600 height="425" style="vertical-align:bottom">
+					<p>This is a frequency distribution of loan amount given. As we can see, around $10000 is the most frequently given loan to people. And one more interesting fact that we can notice is that the value peaks only at whole numbers which suggests that most people take personal loans without exactly calculating how much they want and hence they take a lump sum and use it accordingly.</p>
+					<br><br>
+					<h4 class="h4">Plot 2</h4>
+					<img src="images/CaseStudy1/vis2.png" width=600 height="425" style="vertical-align:bottom">
+					<p>This graph talks about the interest rate given tothe people who asked for the loan. Surprisingly there are people who have taken interest rates greater than 18% as thats a huge rate. We can see that 10% is the most frequenntly given interest rate.</p>
+					<br><br>
+					<h4 class="h4">Plot 3</h4>
+					<img src="images/CaseStudy1/vis3.png" width=600 height="425" style="vertical-align:bottom">
+					<p>This graph talks about the Interest rate based on the home ownership status. As we can see that people who live in rented home or have their own home do not have a big difference in the interest rate. There are many outliers in the dataset which we have to solve for.</p>
+					<br><br>
+					<h4 class="h4">Plot 4</h4>
+					<img src="images/CaseStudy1/vis4.png" width=600 height="425" style="vertical-align:bottom">
+					<p>This plot talks about different interest rates for different loan_purposes. The line on top of graph talks about possible error rate in the data in that category.</p>
+					<br><br>
+					<h4 class="h4">Plot 5</h4>
+					<img src="images/CaseStudy1/vis5.png" width=600 height="425" style="vertical-align:bottom">
+					<p>This plot talks about interest rate of people based on their income type. Whether they have a verified income or not determines their interest rate.</p>
+					<br><br>
+					<h2 class="heading-section">Models</h2>
+					<h4 class="h4">PreProcessing</h4>
+					<p>I first looked at the data and decided the most important columns that can influence the decision of the Interest Rate. Columns like employee title were not of use and there were around 4000 titles and hence we can remove them. After choosing the right columns, I checked for null values in the columns and replaced them with zeros. I then took the categorical data and did one hot encoding and put them in a new data frame that was used for the model estimation.</p>
+					<br><br>
+					<h4 class="h4">Lasso Regression</h4>
+					<img src="images/CaseStudy1/lassocode.png" width=600 height="425" style="vertical-align:bottom">
+					<p>The above is the code for lasso regression</p>
+					<br><br>
+					<h4 class="h4">Random Forest</h4>
+					<img src="images/CaseStudy1/rfcode.png" width=600 height="50" style="vertical-align:bottom">
+					<p>The above is the code for Random Forest</p>
+					<br><br>
+					<h2 class="heading-section">Visualizing the results</h2>
+					<h4 class="h4">Lasso Regression</h4>
+					<img src="images/CaseStudy1/lasso.png" width=600 height="425" style="vertical-align:bottom">
+					<p>Lasso Regression gave an accuracy of 76.9% in training and 76.6% in testing. We can see the plot above for more information.</p>
+					<br><br>
+					<h4 class="h4">Random Forest</h4>
+					<img src="images/CaseStudy1/rf.png" width=600 height="425" style="vertical-align:bottom">
+					<p>Random Forest gave an accuracy of 96.8% in training and 92.2% in testing. We can see the plot above for more information.</p>
+					<br><br>
 
+					<h2 class="heading-section">Future Work</h2>
+					<p>I still feel more cleaning need to be done and the website can be improved. We can use feature selection to exactly identify the required features. Hyper parameter tuning and the use of deep learning models will fetch even more accurate predictions.</p>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<script src="js/jquery.min.js"></script>
